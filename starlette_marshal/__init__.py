@@ -1,9 +1,9 @@
 try:
     from starlette_marshal import rapidjson as json
 except ImportError:
-    import json
+    import json  # noqa: F401
 
 try:
     from starlette_marshal.rapidjson import RapidJSONResponse as JSONResponse
 except ImportError:
-    from starlette.responses import JSONResponse
+    from starlette.responses import JSONResponse  # noqa: F401

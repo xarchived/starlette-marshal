@@ -1,8 +1,7 @@
 from json import JSONDecoder, JSONEncoder
 from typing import Type, Callable, Any, Union
 
-# noinspection PyUnresolvedReferences
-from rapidjson import (
+from rapidjson import (  # noqa: F401
     dump,
     dumps as rapidjson_dumps,
     load,
@@ -45,7 +44,6 @@ from rapidjson import (
 from starlette.responses import Response
 
 
-# noinspection PyUnusedLocal
 def dumps(
         obj: Any,
         *,
@@ -72,7 +70,6 @@ def dumps(
     )
 
 
-# noinspection PyUnusedLocal
 def loads(
         s: Union[str, bytes],
         *,
