@@ -45,18 +45,18 @@ from starlette.responses import Response
 
 
 def dumps(
-        obj: Any,
-        *,
-        skipkeys: bool = False,
-        ensure_ascii: bool = True,
-        check_circular: bool = True,  # noqa
-        allow_nan: bool = True,
-        cls: Type[JSONEncoder] = None,  # noqa
-        indent: Union[None, int, str] = None,
-        separators: tuple[str, str] = None,  # noqa
-        default: Callable = None,
-        sort_keys: bool = False,
-        **kwargs: Any,
+    obj: Any,
+    *,
+    skipkeys: bool = False,
+    ensure_ascii: bool = True,
+    check_circular: bool = True,  # noqa
+    allow_nan: bool = True,
+    cls: Type[JSONEncoder] = None,  # noqa
+    indent: Union[None, int, str] = None,
+    separators: tuple[str, str] = None,  # noqa
+    default: Callable = None,
+    sort_keys: bool = False,
+    **kwargs: Any,
 ) -> str:
     return rapidjson_dumps(
         obj=obj,
@@ -71,15 +71,15 @@ def dumps(
 
 
 def loads(
-        s: Union[str, bytes],
-        *,
-        cls: Type[JSONDecoder] = None,  # noqa
-        object_hook: Callable[[dict], Any] = None,
-        parse_float: Callable[[str], Any] = None,  # noqa
-        parse_int: Callable[[str], Any] = None,  # noqa
-        parse_constant: Callable[[str], Any] = None,  # noqa
-        object_pairs_hook: Callable[[list[tuple[Any, Any]]], Any] = None,  # noqa
-        **kwargs: Any,
+    s: Union[str, bytes],
+    *,
+    cls: Type[JSONDecoder] = None,  # noqa
+    object_hook: Callable[[dict], Any] = None,
+    parse_float: Callable[[str], Any] = None,  # noqa
+    parse_int: Callable[[str], Any] = None,  # noqa
+    parse_constant: Callable[[str], Any] = None,  # noqa
+    object_pairs_hook: Callable[[list[tuple[Any, Any]]], Any] = None,  # noqa
+    **kwargs: Any,
 ) -> Any:
     return rapidjson_loads(
         string=s,
@@ -89,7 +89,7 @@ def loads(
 
 
 class RapidJSONResponse(Response):
-    media_type = 'application/json'
+    media_type = "application/json"
 
     def render(self, content: Any) -> bytes:
         return dumps(
@@ -99,4 +99,4 @@ class RapidJSONResponse(Response):
             indent=None,
             uuid_mode=UM_CANONICAL,
             datetime_mode=DM_ISO8601,
-        ).encode('utf-8')
+        ).encode("utf-8")
