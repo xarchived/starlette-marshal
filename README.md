@@ -9,13 +9,13 @@ library to replace Python "json" library, so we can use it instead.
 To install base package:
 
 ```bash
-pip install -U starlette-marshal
+pip install starlette-marshal
 ```
 
 to support RapidJSON:
 
 ```bash
-pip install -U starlette-marshal[rapidjson]
+pip install starlette-marshal[rapidjson]
 ```
 
 or if you prefer the latest development version, you can install it from the source:
