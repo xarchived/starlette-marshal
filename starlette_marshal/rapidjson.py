@@ -49,11 +49,11 @@ def dumps(
         *,
         skipkeys: bool = False,
         ensure_ascii: bool = True,
-        check_circular: bool = True,
+        check_circular: bool = True,  # noqa
         allow_nan: bool = True,
-        cls: Type[JSONEncoder] = None,
+        cls: Type[JSONEncoder] = None,  # noqa
         indent: Union[None, int, str] = None,
-        separators: tuple[str, str] = None,
+        separators: tuple[str, str] = None,  # noqa
         default: Callable = None,
         sort_keys: bool = False,
         **kwargs: Any,
@@ -73,12 +73,12 @@ def dumps(
 def loads(
         s: Union[str, bytes],
         *,
-        cls: Type[JSONDecoder] = None,
+        cls: Type[JSONDecoder] = None,  # noqa
         object_hook: Callable[[dict], Any] = None,
-        parse_float: Callable[[str], Any] = None,
-        parse_int: Callable[[str], Any] = None,
-        parse_constant: Callable[[str], Any] = None,
-        object_pairs_hook: Callable[[list[tuple[Any, Any]]], Any] = None,
+        parse_float: Callable[[str], Any] = None,  # noqa
+        parse_int: Callable[[str], Any] = None,  # noqa
+        parse_constant: Callable[[str], Any] = None,  # noqa
+        object_pairs_hook: Callable[[list[tuple[Any, Any]]], Any] = None,  # noqa
         **kwargs: Any,
 ) -> Any:
     return rapidjson_loads(
