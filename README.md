@@ -1,6 +1,6 @@
 # Starlette Marshal
 
-This package has two usage.Provide a "JSONResponse" to replace simple Starlette
+This package has two usage. Provide a "JSONResponse" to replace simple Starlette
 "JSONResponse" and works with other Python JSON libraries. And offer a "json"
 library to replace Python "json" library, so we can use it instead.
 
