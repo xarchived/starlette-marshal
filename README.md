@@ -18,8 +18,6 @@ to support RapidJSON:
 pip install starlette-marshal[rapidjson]
 ```
 
-or if you prefer the latest development version, you can install it from the source:
-
 ## Quickstart
 
 We want to be soft dependency. So this package is 100% compatible with standard Python and Starlette package. To archive
