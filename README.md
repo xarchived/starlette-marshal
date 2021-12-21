@@ -20,8 +20,8 @@ pip install starlette-marshal[rapidjson]
 
 ## Quickstart
 
-We want to be soft dependency. So this package is 100% compatible with standard Python and Starlette package. To archive
-this goal you can import it like this:
+We want to be soft dependency. So this package is 100% compatible with standard
+Python and Starlette package. To archive this goal you can import it like this:
 
 ```python
 try:
